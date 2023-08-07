@@ -134,4 +134,3 @@ MESSSAGE_TAGS={
 
 }
 
-APPEND_SLASH = False

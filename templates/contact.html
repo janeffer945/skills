@@ -1,11 +1,13 @@
-    {% extends 'basic.html' %}
-    {% block stylecss %}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />{% endblock stylecss %}
-    {% block tittle %} Contact Us{% endblock tittle %}
-    {% block body %}
-    
-    <div class="container">
+ {% extends 'basic.html' %}
+{% block stylecss %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+ crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ {% endblock stylecss %}
+{% block tittle %}Contact{% endblock tittle %}
+ {% block body %}
+        <div class="container">
         <div class="row">
             <div class="col-md-4">1</div>
             <div class="col-md-4">  
@@ -15,17 +17,17 @@
                 <h3 class="text-white text-center bg-black p-3"> Contact Us</h3>      
 
                 <div class="card p-2 " >
-                    <form action="/contact" method="post">{% csrf_token %}
+                    <form action="/contact" method="post"> {% csrf_token %}
                     <div class="form-group">
                     <h5>  <span> <i class="fas fa-user" ></i> Name</label></span></h5>
                     <input type="text" class="form-control mb-3" name="name" required>
                     </div>
                     <div class="form-group">
                     <h5>  <span> <i class="bx bx-envelope" ></i> Email</label></span></h5>
-                    <input type="text" value="{{user.email}}" class="form-control mb-3" name="email" required disabled>
+                    <input type="email" value="{{user.email}}" class="form-control mb-3" name="email" required disabled>
                     </div>
                     <div class="form-group">
-                    <h5>  <span> <i class="fas fa-phone-alt" ></i> Phone No.</label></span></h5>
+                    <h5>  <span> <i class="fas fa-phone-alt" ></i> Phoneno</label></span></h5>
                     <input type="number" class="form-control mb-3" name="num" required>
                     </div>
                     <div class="form-group">
