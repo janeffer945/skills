@@ -20,10 +20,13 @@ def contact(request):
     messages.success(request, "Thanks for conctacting, I will get to you soon! ")
     return redirect('/contact')
    
-    return render(request, 'contact.html')
+
+   return render(request, 'contact.html')
    
 def blog(request):
-    return render(request, 'blog.html')
+    posts=Blogs.objects.all()
+    context={'posts':posts}
+    return render(request, 'blog.html', context)
 
 def resume(request):
     return render(request, 'resume.html')
