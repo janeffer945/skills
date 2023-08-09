@@ -23,8 +23,8 @@
             <h4 class="title">{{post.title}}</a></h4>
             <p class="description">{{post.description}}</p>
             <h6>posted by: <b>{{post.authname}}</b></h6>
-            <h6>Posted on: <b>{{post.timestamp}}</b> </h6> 
-             <h6> {{post.title}}:<a href="{{post.links}}"></a></h6>
+            <h6>Posted on: <b>{{post.timestamp}}</b> </h6>
+            <h6>Link: <a href="{{post.links}}" target="_blank">{{post.links}}</a></h6>
           </div>
 {% endfor %}
          
