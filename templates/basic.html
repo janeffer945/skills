@@ -64,13 +64,13 @@
            <li><a href="/blog" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Blog</span></a></li>
          <li><a href="/contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
 {% if not request.user.is_authenticated %}
-<!--   
+  
                     <li><a href="/auth/signup/" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Signup</span></a></li>
                               <li><a href="/auth/login" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Login</span></a></li>
-                           -->
+                          
 
 {% else %}
-           <!-- <li><a href="/auth/logout" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Logout</span></a></li> -->
+           <li><a href="/auth/logout" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Logout</span></a></li>
 
 {% endif %}
 
