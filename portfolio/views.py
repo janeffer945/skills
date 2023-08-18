@@ -5,7 +5,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.core.mail.message import EmailMessage
 from django.core import mail
-from django.contrib.auth.models import User 
+from django.contrib.auth.models import User
 from django.contrib.auth import authenticate,login,logout
 
 
@@ -28,9 +28,6 @@ def contact(request):
         query.save()
         messages.info(request, "Thanks for reaching to us we will get back to you soon...")
 
-
-        
-       
         return redirect('/contact')  # Redirect to the 'contact' view
 
     return render(request, 'contact.html')
